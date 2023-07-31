@@ -1,5 +1,5 @@
 def tratamento():
-    txt = open("marcos.txt", "r")
+    txt = open("data.txt", "r")
     tratar = txt.read()
     txt.close()
     abc = tratar.split("\n")
@@ -18,7 +18,7 @@ def tratamento():
 
 
 def registrar(banco):
-    dataw = open("marcos.txt", "a")
+    dataw = open("data.txt", "a")
     controle = True
     while True:
         produto = input("Qual é o produto? ---> ")
@@ -53,7 +53,7 @@ def mudar(banco):
             qnt = input(f"Nova quantia ({a[0]}) ---> ")
             a[1] = qnt
             break
-    dta = open("marcos.txt", "w")
+    dta = open("data.txt", "w")
     for ele in banco:
         dta.write(f'!{ele[0]}\n#{ele[1]}\n${ele[2]}\n\n')
     dta.close()
@@ -76,7 +76,7 @@ def deletar(banco):
             print("Deletado!")
             break
 
-    data_delete = open("marcos.txt", "w")
+    data_delete = open("data.txt", "w")
     for ele in banco:
         data_delete.write(f'!{ele[0]}\n#{ele[1]}\n${ele[2]}\n\n')
     data_delete.close()
